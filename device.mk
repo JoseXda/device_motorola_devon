@@ -7,6 +7,9 @@
 # Inherit from sm6225-common
 $(call inherit-product, device/motorola/sm6225-common/bengal.mk)
 
+PRODUCT_BOARD_PLATFORM := bengal
+PRODUCT_USES_QCOM_HARDWARE := true
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
@@ -67,3 +70,4 @@ PRODUCT_COPY_FILES += \
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/motorola/devon/devon-vendor.mk)
+
